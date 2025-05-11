@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergy Scan Results</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header text-center">
+                        <h2>Allergy Scan Results</h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- <p><strong>Extracted Text:</strong></p>
+                        <p>{{ text }}</p> -->
+
+                        <h2>Allergens Found:</h2>
+                        {% if allergens %}
+                            <ul class="list-group">
+                            {% for allergen in allergens %}
+                                <li class="list-group-item list-group-item-danger">{{ allergen }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p class="text-success">No allergens found!</p>
+                        {% endif %}
+                        <div class="mt-4 text-center">
+                            <a href="/" class="btn btn-secondary">Scan Another Label</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
