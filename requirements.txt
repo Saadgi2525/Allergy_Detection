@@ -1,0 +1,7 @@
+Flask
+pytesseract
+opencv-python-headless
+Pillow
+numpy
+requests
+mysql-connector-python
